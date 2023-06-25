@@ -9,12 +9,13 @@ import { useHistory } from "react-router-dom";
 const Login = () => {
   //States
   const [show, setShow] = useState(false);
+  const handleClick = () => setShow(!show);
+  const toast = useToast();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [loading, setLoading] = useState(false);
   //Functions
-  const handleClick = () => setShow(!show);
-  const toast = useToast();
+
   const history = useHistory();
   const submitHandler = async () => {
     setLoading(true);
@@ -58,7 +59,7 @@ const Login = () => {
     } catch (error) {
       toast({
         title: "Error Occured!",
-        description: error.response.data.message,
+        // description: error.response.data.message,
         status: "error",
         duration: 5000,
         isClosable: true,
