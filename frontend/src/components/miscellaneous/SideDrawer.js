@@ -141,7 +141,7 @@ function SideDrawer() {
             </Text>
           </Button>
         </Tooltip>
-        <Text fontSize="2xl" fontFamily="Work sans">
+        <Text textAlign="center" fontSize="2xl" fontFamily="Work sans">
           Let's Connect
         </Text>
         <div>
